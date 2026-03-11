@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Age Insight - Your Life in Numbers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(236, 91, 19, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .liquid-bg {
+            background: radial-gradient(circle at 0% 0%, #3a2218 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, #2b1a12 0%, transparent 50%),
+                        radial-gradient(circle at 50% 50%, #221610 0%, #1a100a 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(236, 91, 19, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen liquid-bg">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-40">
+<div class="flex items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Age Insight</h2>
+</div>
+<div class="flex gap-3">
+<button class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 lg:px-40">
+<div class="layout-content-container flex flex-col max-w-[800px] flex-1 gap-6">
+<!-- Header Section -->
+<div class="text-center py-6">
+<h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-glow mb-2">Analysis Complete</h1>
+<p class="text-slate-400">Discover your life's journey in detail</p>
+</div>
+<!-- Exact Age Card (Hero) -->
+<div class="liquid-glass rounded-xl p-8 flex flex-col items-center justify-center text-center gap-4 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-20">
+<span class="material-symbols-outlined text-8xl">cake</span>
+</div>
+<span class="text-primary font-medium tracking-widest uppercase text-xs">Exact Age</span>
+<div class="flex flex-col gap-1">
+<h2 class="text-6xl lg:text-7xl font-bold text-white tracking-tighter">24.329</h2>
+<p class="text-xl text-slate-300 font-medium">Years Old Today</p>
+</div>
+<div class="flex gap-4 mt-2">
+<div class="px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-semibold">
+                                Gemini
+                            </div>
+<div class="px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 text-slate-300 text-sm font-semibold">
+                                Year of the Tiger
+                            </div>
+</div>
+</div>
+<!-- Grid Layout for Stats -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Next Birthday Card -->
+<div class="liquid-glass rounded-xl p-6 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">event</span>
+</div>
+<h3 class="text-lg font-semibold">Next Birthday</h3>
+</div>
+<div class="flex flex-col">
+<p class="text-4xl font-bold text-white">128</p>
+<span class="text-sm text-slate-400 uppercase tracking-wider font-medium">Days Remaining</span>
+</div>
+<div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%]" style="box-shadow: 0 0 10px rgba(236, 91, 19, 0.5);"></div>
+</div>
+<p class="text-xs text-slate-500">June 15, 2024 • Tuesday</p>
+</div>
+<!-- Birth Info Card -->
+<div class="liquid-glass rounded-xl p-6 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<h3 class="text-lg font-semibold">Birth Details</h3>
+</div>
+<div class="flex flex-col">
+<p class="text-4xl font-bold text-white">08:45</p>
+<span class="text-sm text-slate-400 uppercase tracking-wider font-medium">Time of Birth</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-center bg-cover" data-alt="National flag icon of birth country" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7xO9BV9vSPWUlMzM8qHdxrrkK2p8FYivRx7kwPsoKZ1aQ0X0KCZj-pP5eZsfiYbB789WNizavzIZzkyMEFkTcG-LMDrwWF63UZuuUCLITwPSSGVFFQ9kT8n4gxTIq4X2ORzGAbay94XsDarhuquqld7e1DZGvVzuvcnc7-pdWLiiXdL9XxvlB4cuUX0HA89bSLEodwe_bC2GIMHUJg5LP-k08zhmk12uzVyavyxeXd1ulmuPyyZNEpxnG5xXYiyzzQkXeEPIPltY')"></div>
+<p class="text-sm text-slate-300">San Francisco, CA</p>
+</div>
+<p class="text-xs text-slate-500 italic">"Born on a crisp Wednesday morning"</p>
+</div>
+</div>
+<!-- Life Statistics Section -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-2">
+<h3 class="text-xl font-bold">Life Statistics</h3>
+<button class="text-primary text-sm font-semibold hover:underline">Full Report</button>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Days Lived -->
+<div class="liquid-glass rounded-xl p-5 border-l-4 border-l-primary">
+<span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Days Lived</span>
+<h4 class="text-2xl font-bold text-white">8,882</h4>
+</div>
+<!-- Heartbeats -->
+<div class="liquid-glass rounded-xl p-5 border-l-4 border-l-red-500/50">
+<span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Heartbeats</span>
+<h4 class="text-2xl font-bold text-white">942.1M</h4>
+</div>
+<!-- Breath Count -->
+<div class="liquid-glass rounded-xl p-5 border-l-4 border-l-blue-400/50">
+<span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Breaths Taken</span>
+<h4 class="text-2xl font-bold text-white">192.4M</h4>
+</div>
+<!-- Sleep Hours -->
+<div class="liquid-glass rounded-xl p-5 border-l-4 border-l-indigo-400/50">
+<span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Hours Slept</span>
+<h4 class="text-2xl font-bold text-white">29,200</h4>
+</div>
+<!-- Meals Consumed -->
+<div class="liquid-glass rounded-xl p-5 border-l-4 border-l-orange-400/50">
+<span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Meals Eaten</span>
+<h4 class="text-2xl font-bold text-white">26,646</h4>
+</div>
+<!-- Earth Rotations -->
+<div class="liquid-glass rounded-xl p-5 border-l-4 border-l-green-400/50">
+<span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1">Full Rotations</span>
+<h4 class="text-2xl font-bold text-white">8,882</h4>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="mt-8 flex flex-col gap-4">
+<button class="w-full py-4 rounded-xl bg-primary text-white font-bold text-lg shadow-lg shadow-primary/30 hover:brightness-110 active:scale-[0.98] transition-all">
+                            Export Life Summary PDF
+                        </button>
+<p class="text-center text-slate-500 text-sm">Data calculated based on UTC standards. Accuracy may vary by seconds.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Spacer -->
+<footer class="py-10"></footer>
+</div>
+</div>
+</body></html>

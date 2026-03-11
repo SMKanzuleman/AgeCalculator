@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        .liquid-progress {
+            background: linear-gradient(90deg, #ec5b13 0%, #ff8c52 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .liquid-progress::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.3) 50%,
+                rgba(255,255,255,0) 100%
+            );
+        }
+        .bg-blur-blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-hidden">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-6">
+<!-- Blurred Background Shapes -->
+<div class="bg-blur-blob w-[400px] h-[400px] bg-primary rounded-full -top-20 -left-20"></div>
+<div class="bg-blur-blob w-[300px] h-[300px] bg-primary/30 rounded-full bottom-20 -right-10"></div>
+<div class="bg-blur-blob w-[250px] h-[250px] bg-orange-900/40 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+<!-- Main Loading Container -->
+<div class="relative z-10 w-full max-w-[440px]">
+<!-- Top Logo/Icon (Minimalist) -->
+<div class="flex flex-col items-center gap-6 mb-12">
+<div class="size-16 rounded-2xl glass-card flex items-center justify-center text-primary shadow-xl">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">face_retouching_natural</span>
+</div>
+<div class="text-center">
+<h1 class="text-slate-900 dark:text-slate-100 text-xl font-semibold tracking-tight">Age Insight</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Biometric Analysis Engine</p>
+</div>
+</div>
+<!-- Liquid Glass Card -->
+<div class="glass-card rounded-xl p-8 flex flex-col items-center">
+<div class="w-full space-y-6">
+<div class="text-center space-y-2">
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">Calculating your age...</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base">Analyzing facial feature points</p>
+</div>
+<!-- Liquid Progress Bar Wrapper -->
+<div class="space-y-3">
+<div class="flex items-end justify-between px-1">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Processing</span>
+<span class="text-slate-900 dark:text-slate-100 text-sm font-medium">65%</span>
+</div>
+<div class="h-3 w-full bg-slate-200 dark:bg-slate-800/50 rounded-full overflow-hidden p-[2px] border border-white/5">
+<div class="h-full w-[65%] liquid-progress rounded-full"></div>
+</div>
+</div>
+<!-- Feature Scanning Indicator -->
+<div class="grid grid-cols-3 gap-3 pt-4">
+<div class="flex flex-col items-center gap-2">
+<div class="size-10 rounded-full glass-card flex items-center justify-center border-primary/30">
+<span class="material-symbols-outlined text-primary text-xl">visibility</span>
+</div>
+<span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-tighter">Ocular</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-10 rounded-full glass-card flex items-center justify-center border-primary/30">
+<span class="material-symbols-outlined text-primary text-xl">texture</span>
+</div>
+<span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-tighter">Dermis</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-10 rounded-full glass-card flex items-center justify-center border-primary/30">
+<span class="material-symbols-outlined text-primary text-xl">architecture</span>
+</div>
+<span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-tighter">Skeletal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="mt-12 flex flex-col items-center gap-6">
+<button class="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-semibold transition-all hover:bg-slate-300 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-lg">close</span>
+<span>Cancel Analysis</span>
+</button>
+<div class="flex items-center gap-2 opacity-40">
+<div class="h-px w-8 bg-slate-400"></div>
+<span class="text-[10px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 font-bold">AI Powered Vision</span>
+<div class="h-px w-8 bg-slate-400"></div>
+</div>
+</div>
+</div>
+<!-- Floating UI Elements (Abstract) -->
+<div class="absolute top-10 right-10 p-4 rounded-xl glass-card text-[10px] text-slate-500 dark:text-slate-400 font-mono hidden md:block">
+            LAT: 34.0522<br/>
+            LNG: -118.2437<br/>
+            VER: 2.0.4-BETA
+        </div>
+<!-- Background Image Reference (Abstract pattern) -->
+<div class="fixed inset-0 -z-10 opacity-20 pointer-events-none overflow-hidden">
+<div class="w-full h-full" data-alt="Abstract soft glowing orange and dark brown organic shapes"></div>
+</div>
+</div>
+</body></html>

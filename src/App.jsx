@@ -1,13 +1,11 @@
 import React from 'react'
 import CalculateAge from './utils/CalculateAge'
+import Fscreen from './Components/Fscreen'
+import AgeCalculator from './Components/AgeCalculator'
 const App = () => {
   return (
-    <h1>KanzulEman</h1>
+    <AgeCalculator />
   )
 }
 
 export default App
-
-
-
-
