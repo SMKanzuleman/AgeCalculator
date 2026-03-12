@@ -1,11 +1,14 @@
-import React from 'react'
-import CalculateAge from './utils/CalculateAge'
-import Fscreen from './Components/Fscreen'
-import AgeCalculator from './Components/AgeCalculator'
+import React from "react";
+import AgeCalculator from "./Components/AgeCalculator";
+import Navbar from "./Components/Navbar";
+
 const App = () => {
   return (
-    <AgeCalculator />
-  )
-}
+    <div>
+      <Navbar />
+      <AgeCalculator />
+    </div>
+  );
+};
 
-export default App
+export default App;

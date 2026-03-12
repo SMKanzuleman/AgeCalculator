@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { CiStopwatch } from "react-icons/ci";
 
 const InputCard = () => {
     let [date,setDate]=useState('')
@@ -9,28 +10,32 @@ const InputCard = () => {
       setAge(result);
     };
   return (
-    <div className="w-full h-full bg-muted flex flex-col justify-center items-center gap-8">
-      <div>
-        <h1 className="text-5xl font-bold">AgeKal</h1>
-        <p className='mt-4 text-description'>Calculate your fucking age right now</p>
+    <div className="w-full h-full liquid-glass rounded-3xl flex flex-col justify-center items-center gap-8 font-poppins animate-blob-float">
+        <div>
+        <h1 className="text-6xl font-poppins text-glow font-bold text-white text-center font-Inter">
+          AgeKal
+        </h1>
+        <p className="mt-4 text-description">
+          Calculate your fucking age right now
+        </p>
       </div>
-      <div className="flex justify-center items-center w-[7 0%] h-10">
+      <div className="flex justify-center items-center w-[70%] h-13 text-white/30">
         <input
           type="Date"
           value={date}
-          className="w-full h-full bg-white/50 flex justify-center items-center px-10 focus:outline-0 border border-bg-10 rounded-full"
+          className="w-full h-full liquid-glass flex justify-center items-center px-10 py-3 focus:outline-0 border border-bg-10 rounded-full"
           onChange={(e) => {
             setDate(e.target.value);
             console.log("Age is Changed to ", date);
           }}
         />
       </div>
-      <div className="w-full h-10 flex justify-center">
+      <div className="w-full h-12 flex justify-center">
         <button
-          className="bg-white/40 cursor-pointer px-5 py-1 font-mono rounded-xl"
+          className="cursor-pointer font-family-rugi text-2xl  rounded-md bg-linear-to-r from-accent/90 to-accent/90 text-white px-7"
           onClick={HandleAgeCalculation}
         >
-          Check Your Age
+          Check Age
         </button>
       </div>
     </div>
