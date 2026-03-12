@@ -11,7 +11,6 @@ const AgeCalculator = () => {
   let [date, setDate] = useState("");
   let [age, setAge] = useState("");
   let [state, setState] = useState("idle");
-
   let HandleAgeCalculation = () => {
     if (!date) return;
     setState("Loading");
@@ -21,11 +20,11 @@ const AgeCalculator = () => {
       setState("Result");
     }, 5000);
   };
-
   if (state == "Loading") {
     return <LoadingScreen />;
   } else if (state == "Result") {
-    return <ResultScreen />;
+    return <ResultScreen
+    Age={age} />;
   } else {
     return (
       <InputCard
@@ -35,16 +34,6 @@ const AgeCalculator = () => {
       />
     );
   }
-
-  return (
-    <div className=" w-full h-screen relative pt-16">
-      <Background className="flex flex-col justify-center items-center">
-        <div className="w-100 h-100">
-          <InputCard />
-        </div>
-      </Background>
-    </div>
-  );
 };
 
 export default AgeCalculator;
