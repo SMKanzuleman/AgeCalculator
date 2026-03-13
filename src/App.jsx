@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
       {/* <Navbar /> */}
-      <div className="w-full h-screen">
+      <div className="w-full min-h-screen ">
         <Background>
           <AgeCalculator />
         </Background>

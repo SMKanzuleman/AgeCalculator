@@ -1,5 +1,6 @@
 import React from 'react'
 import { ImStatsDots } from "react-icons/im";
+import StateCard from './StateCard';
 
 const LifeStats = () => {
   return (
@@ -10,6 +11,14 @@ const LifeStats = () => {
           className="bg-accent/10 text-accent p-2 rounded-lg"
         />
         <h1 className="text-xl font-bold ">Life Statistics</h1>
+      </div>
+      <div className="w-full h-full flex flex-wrap justify-center items-center gap-5 mb-4">
+        <StateCard label={"Yes"} bcolor={"border-l-blue-900"} value={1200} />
+        <StateCard label={"Yes"} bcolor={"border-l-red-900"} value={1200} />
+        <StateCard label={"Yes"} bcolor={"border-l-green-900"} value={1200} />
+        <StateCard label={"Yes"} bcolor={"border-l-olive-700"} value={1200} />
+        <StateCard label={"Yes"} bcolor={"border-l-fuchsia-900"} value={1200} />
+        <StateCard label={"Yes"} bcolor={"border-l-olive-600"} value={1200} />
       </div>
     </div>
   );

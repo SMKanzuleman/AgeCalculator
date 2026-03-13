@@ -15,7 +15,7 @@ const LoadingScreen = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="w-full h-full flex justify-center items-center bg">
+    <div className="w-full min-h-screen flex justify-center items-center bg">
       <div className="w-50">
         <p className="mb-2 text-white text-2xl text-center font-family-rugi">
           {progress}%
