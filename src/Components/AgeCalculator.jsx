@@ -18,14 +18,17 @@ const AgeCalculator = () => {
       let result = CalculateAge(date);
       setAge(result);
       setState("Result");
-    }, 5000);
+    }, 1000);
   };
   if (state == "Loading") {
     return <LoadingScreen />;
   } else if (state == "Result") {
     return <ResultScreen
-    Age={age} />;
-  } else {
+    Age={age}
+    InputDOB={date}
+    state={state}
+    setState={setState} />;
+  } else if(state=="idle") {
     return (
       <InputCard
         date={date}

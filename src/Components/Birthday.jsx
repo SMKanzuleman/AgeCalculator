@@ -1,12 +1,15 @@
 import React from 'react'
 import { SlCalender } from "react-icons/sl";
 import { MdCake } from "react-icons/md";
+import { BirthdayDays } from "../utils/ExtraCalculation";
 
-const Birthday = () => {
+const Birthday = ({InputDOB}) => {
+  const aa=BirthdayDays(InputDOB)
+  const width_Percent=(aa/365)*100;
   return (
     <div className="relative w-[40%] font-poppins text-white p-5 h-full liquid-glass rounded-2xl flex flex-col justify-between gap-5">
-      <div className="absolute top-40 left-9">
-        <MdCake size={42} className='text-accent' />
+      <div className="absolute top-42 left-13">
+        <MdCake size={35} className='text-accent' />
       </div>
       <div className="flex justify-start items-center gap-2">
         <SlCalender
@@ -16,17 +19,17 @@ const Birthday = () => {
         <h1 className="text-xl font-bold ">Next Birthday</h1>
       </div>
       <div className="flex flex-col items-center gap-1">
-        <h1 className="text-5xl font-bold ">120</h1>
+        <h1 className="text-5xl font-bold ">{aa}</h1>
         <h1 className="text-description text-xs ">Days Remaining</h1>
       </div>
       <div className="flex flex-col gap-2 w-full items-center">
-        <div className="w-[90%] h-2 bg-white/10 rounded-full overflow-hidden">
+        <div className="w-[80%] h-2 bg-white/10 rounded-full overflow-hidden">
           <div
             className="h-full bg-accent rounded-full"
-            style={{ width: "60%" }}
+            style={{ width: `${width_Percent}%` }}
           ></div>
         </div>
-        <div className=" w-[90%] flex justify-between text-[10px] text-description uppercase tracking-widest">
+        <div className=" w-[80%] flex justify-between text-[10px] text-description uppercase tracking-widest">
           <span className="">Days</span>
         </div>
       </div>

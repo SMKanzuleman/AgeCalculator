@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 const Background = (props) => {
   return (
     <div className="min-h-screen w-full relative flex items-center justify-center bg-bgdark">

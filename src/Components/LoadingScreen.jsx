@@ -9,7 +9,7 @@ const LoadingScreen = () => {
           clearInterval(interval);
           return 100;
         }
-        return prev + 2;
+        return prev + 10;
       });
     }, 100);
     return () => clearInterval(interval);
