@@ -8,20 +8,20 @@ const InputCard = ({ date, setDate, HandleAgeCalculation }) => {
         <div className="w-full h-full liquid-glass rounded-3xl flex flex-col justify-center items-center gap-8 font-poppins animate-blob-float">
           <div>
             <h1 className="text-6xl font-poppins text-glow font-bold text-white text-center ">
-              AgeKal
+              Calage
             </h1>
             <p className="mt-4 text-description tracking-wide">
               Calculate your age right now
             </p>
           </div>
-          <div className="flex justify-center items-center w-[70%] h-13 text-white/30">
+          <div className="flex justify-center items-center lg:w-[70%] w-[80%] h-13 text-white/30">
             <input
               type="Date"
               value={date}
-              className="w-full h-full liquid-glass flex justify-center items-center px-10 py-3 focus:outline-0 border border-bg-10 rounded-full"
+              placeholder='mm/dd/yyyy'
+              className="w-full h-full liquid-glass flex justify-center items-center px-3 py-3 focus:outline-0 border border-bg-10 rounded-full"
               onChange={(e) => {
                 setDate(e.target.value);
-                console.log("Age is Changed to ", date);
               }}
             />
           </div>

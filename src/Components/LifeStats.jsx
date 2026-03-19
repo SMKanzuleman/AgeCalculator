@@ -22,7 +22,10 @@ const LifeStats = ({InputDOB}) => {
           size={32}
           className="bg-accent/10 text-accent p-2 rounded-lg"
         />
-        <h1 className="text-xl font-bold ">Life Statistics</h1>
+        <div>
+          <h1 className="text-xl font-bold ">Life Statistics</h1>
+          <p className="text-red-700 text-[9px]">For Normle Healthy Person</p>
+        </div>
       </div>
       <div className="w-full h-full flex flex-row flex-wrap justify-center items-center gap-5 mb-4">
         <StateCard label={"Days"} bcolor={"border-l-blue-900"} value={days} />
@@ -52,6 +55,7 @@ const LifeStats = ({InputDOB}) => {
           value={formatValue(TotalMeals(days))}
         />
       </div>
+      <div></div>
     </div>
   );
 }

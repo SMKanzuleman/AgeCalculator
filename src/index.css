@@ -62,10 +62,4 @@
     transform: rotate(45)
   }
 }
-input[type="date"]::-webkit-calendar-picker-indicator {
-  margin-left: 20px; 
-  cursor: pointer;
-  filter: invert(
-    0.5
-  );
-}
+

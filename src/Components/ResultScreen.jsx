@@ -10,8 +10,8 @@ const ResultScreen = ({ Age, InputDOB, state, setState }) => {
     setState("idle");
   };
   return (
-    <div className="w-full min-h-screen flex lg:flex-col flex-col px-10 items-center gap-5 z-0">
-      <div className="w-full mt-5">
+    <div className="w-full min-h-screen flex lg:flex-col flex-col px-10 items-center gap-10 lg:gap-5 z-0">
+      <div className="w-full mt-10">
         <h1 className="text-3xl font-poppins text-glow font-bold text-white text-center mb-1 ">
           Analysis Completed
         </h1>
@@ -19,8 +19,10 @@ const ResultScreen = ({ Age, InputDOB, state, setState }) => {
           Discover your life Journey in detail
         </p>
       </div>
+      <div className="w-full h-full flex justify-center">
       <ExactAgeSection Age={Age} />
-      <div className="w-full lg:w-[80%] h-100 lg:h-65 flex lg:flex-row flex-col gap-5 justify-center items-center">
+      </div>
+      <div className="w-full lg:w-[80%] h-100 lg:h-65 flex lg:flex-row flex-col gap-6 justify-center items-center">
         <Birthday InputDOB={InputDOB} />
         <LifeStats InputDOB={InputDOB} />
       </div>
