@@ -7,6 +7,7 @@ function CalculateAge(inputdob) {
   let days = today.getDate() - dob.getDate();
 
 
+
   //! If days are negative borrow one month(30 days) from months
   if (days < 0) {
     months--;

@@ -4,14 +4,14 @@ import Background from './Background';
 
 const InputCard = ({ date, setDate, HandleAgeCalculation }) => {
   return (
-    <div className="w-100 h-100 ">
+    <div className="w-100 h-100 px-5">
         <div className="w-full h-full liquid-glass rounded-3xl flex flex-col justify-center items-center gap-8 font-poppins animate-blob-float">
           <div>
             <h1 className="text-6xl font-poppins text-glow font-bold text-white text-center ">
               AgeKal
             </h1>
-            <p className="mt-4 text-description">
-              Calculate your fucking age right now
+            <p className="mt-4 text-description tracking-wide">
+              Calculate your age right now
             </p>
           </div>
           <div className="flex justify-center items-center w-[70%] h-13 text-white/30">

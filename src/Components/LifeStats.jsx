@@ -11,13 +11,12 @@ import {
   formatValue,
   TotalMeals
 } from "../utils/ExtraCalculation";
-
 const LifeStats = ({InputDOB}) => {
 
   const days=TotalDays(InputDOB);
 
   return (
-    <div className=" w-[60%] font-poppins text-white p-5 h-full liquid-glass rounded-2xl flex flex-col justify-between gap-5">
+    <div className="w-full lg:w-[60%] font-poppins text-white p-5 h-full liquid-glass rounded-2xl flex flex-col justify-between gap-5">
       <div className="flex justify-start items-center gap-2">
         <ImStatsDots
           size={32}
@@ -25,7 +24,7 @@ const LifeStats = ({InputDOB}) => {
         />
         <h1 className="text-xl font-bold ">Life Statistics</h1>
       </div>
-      <div className="w-full h-full flex flex-wrap justify-center items-center gap-5 mb-4">
+      <div className="w-full h-full flex flex-row flex-wrap justify-center items-center gap-5 mb-4">
         <StateCard label={"Days"} bcolor={"border-l-blue-900"} value={days} />
         <StateCard
           label={"HeartBeats"}

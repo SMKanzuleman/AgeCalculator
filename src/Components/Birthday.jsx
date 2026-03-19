@@ -7,8 +7,8 @@ const Birthday = ({InputDOB}) => {
   const aa=BirthdayDays(InputDOB)
   const width_Percent=(aa/365)*100;
   return (
-    <div className="relative w-[40%] font-poppins text-white p-5 h-full liquid-glass rounded-2xl flex flex-col justify-between gap-5">
-      <div className="absolute top-42 left-13">
+    <div className="relative lg:w-[40%] w-full font-poppins text-white p-5 h-full liquid-glass rounded-2xl flex flex-col justify-between gap-5">
+      <div className="absolute lg:top-42 lg:left-13 top-30 left-13">
         <MdCake size={35} className='text-accent' />
       </div>
       <div className="flex justify-start items-center gap-2">
